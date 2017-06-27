@@ -1,0 +1,102 @@
+<config>
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <username>
+      <name>admin</name>
+      <privilege>15</privilege>
+      <secret>
+        <encryption>5</encryption>
+        <secret>$1$4r7Y$HQjowK97TfawCcCTTA.lf1</secret>
+      </secret>
+    </username>
+    <ip>
+      <domain>
+        <name>abc.inc</name>
+      </domain>
+      <http xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-http">
+        <authentication>
+          <local/>
+        </authentication>
+        <server>true</server>
+        <secure-server>true</secure-server>
+      </http>
+    </ip>
+    <clock>
+      <summer-time>
+        <zone>EDT</zone>
+        <recurring/>
+      </summer-time>
+      <timezone>
+        <zone>EST</zone>
+        <hours>-5</hours>
+        <minutes>0</minutes>
+      </timezone>
+    </clock>
+    <logging>
+      <buffered>
+        <size>8192</size>
+      </buffered>
+      <host>
+        <ipv4-host-list>
+          <ipv4-host>192.168.10.10</ipv4-host>
+        </ipv4-host-list>
+      </host>
+    </logging>
+    <aaa>
+      <new-model xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-aaa"/>
+      <authentication xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-aaa">
+        <login>
+          <name>default</name>
+          <a1>
+            <local/>
+          </a1>
+        </login>
+      </authentication>
+      <authorization xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-aaa">
+        <exec>
+          <name>default</name>
+          <a1>
+            <local/>
+          </a1>
+        </exec>
+      </authorization>
+      <session-id xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-aaa">common</session-id>
+    </aaa>
+    <snmp-server>
+      <community xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-snmp">
+        <name>NetProgrammability</name>
+        <RO/>
+      </community>
+      <contact xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-snmp">Network Operations - netops@domain.intra</contact>
+    </snmp-server>
+    <line>
+      <console>
+        <first>0</first>
+        <stopbits>1</stopbits>
+      </console>
+      <vty>
+        <first>0</first>
+        <last>4</last>
+        <session-timeout>
+          <session-timeout-value>20</session-timeout-value>
+        </session-timeout>
+        <transport>
+          <input>
+            <input>ssh</input>
+          </input>
+        </transport>
+      </vty>
+      <vty>
+        <first>5</first>
+        <last>15</last>
+        <session-timeout>
+          <session-timeout-value>20</session-timeout-value>
+        </session-timeout>
+        <transport>
+          <input>
+            <input>ssh</input>
+          </input>
+        </transport>
+      </vty>
+    </line>
+  </native>
+</config>
