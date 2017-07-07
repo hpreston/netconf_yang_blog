@@ -1,6 +1,6 @@
 # NETCONF/YANG Quick Example
 
-This repository is a simple example of a couple Python scripts that can be used to retrieve and set configuration information from an IOS XE device.  This code is provided to accompany a blog on the same topic (link coming soon).  
+This repository is a simple example of a couple Python scripts that can be used to retrieve and set configuration information from an IOS XE device.  This code is provided to accompany a [blog on the same topic](http://www.infoworld.com/article/3204130/development-tools/the-new-network-but-i-grew-up-in-the-old-network-how-do-i-get-started.html).  
 
 You can execute these scripts yourself by reserving a [DevNet Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/32b0ae9b-3960-469f-8852-2a03389063d9?diagramType=Topology) (completely free) and following these steps.  
 
