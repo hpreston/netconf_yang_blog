@@ -1,31 +1,35 @@
 # NETCONF/YANG Quick Example
 
-This repository is a simple example of a couple Python scripts that can be used to retrieve and set configuration information from an IOS XE device.  This code is provided to accompany a [blog on the same topic](http://www.infoworld.com/article/3204130/development-tools/the-new-network-but-i-grew-up-in-the-old-network-how-do-i-get-started.html).  
+This repository is a simple example of a couple Python scripts that can be used to retrieve and set configuration information from an IOS XE device.  This code is provided to accompany a [blog on the same topic](http://www.infoworld.com/article/3204130/development-tools/the-new-network-but-i-grew-up-in-the-old-network-how-do-i-get-started.html). 
 
-You can execute these scripts yourself by reserving a [DevNet Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/32b0ae9b-3960-469f-8852-2a03389063d9?diagramType=Topology) (completely free) and following these steps.  
+You can execute these scripts yourself by reserving a [DevNet Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/32b0ae9b-3960-469f-8852-2a03389063d9?diagramType=Topology) (completely free) and following these steps.
 
-1. Clone the code 
+1. Clone the code and change to the clone directory.
 
-```bash
-git clone https://github.com/hpreston/netconf_yang_blog
-cd netconf_yang_blog 
-```
+   ```bash
+   git clone https://github.com/hpreston/netconf_yang_blog
+   cd netconf_yang_blog 
+   ```
 
-1. Install the Python requirements. 
+1. Connect to the sandbox VPN using the credentials sent to you through email.
 
-```bash
-pip install -r requirements.txt 
-```
+1. (recommended) Create and activate a [Python virtual environment](https://docs.python.org/3/tutorial/venv.html).
+
+1. Install the Python requirements.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 1. Get the configuration. 
 
-```bash 
-python get_full_config.py
-```
+   ```bash
+   python get_full_config.py
+   ```
 
 1. Send the configuration. 
 
-```bash
-push_standard_config.py
-```
+   ```bash
+   python push_standard_config.py
+   ```
 
